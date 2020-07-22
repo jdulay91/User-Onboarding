@@ -33,7 +33,7 @@ function App() {
     axios.get('https://reqres.in/api/users')
       .then(res => {
         setUsers(res.data.data)
-        console.log(users)
+        
       })
       .catch(err => {
         console.log(err)
@@ -44,6 +44,7 @@ function App() {
     axios.post('https://reqres.in/api/users', newUser)
       .then(res => {
         setUsers([res.data, ...users])
+        setFormValues(initialFormValues)
       })
       .catch(err => {
         console.log(err)

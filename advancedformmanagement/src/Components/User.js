@@ -6,8 +6,10 @@ export default function User({ user }) {
     }
     return (
         <div>
-            <h2>Name: {user.first_name}</h2>
+            <h2>Name: {user.name}</h2>
             <p>Email: {user.email}</p>
+            <p>Password: Secret</p>            
+
         </div>
     )
 }
